@@ -101,7 +101,7 @@ body {
 }
 .header {
   border-radius: 5px;
-  box-shadow: inset 1px 1px 0px 0px #8b8f96;
+  box-shadow: inset 1px 1px 1px 1px #8b8f96;
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
