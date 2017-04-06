@@ -1,0 +1,62 @@
+html{
+	height:100%;
+}
+body {
+	overflow: hidden;
+	background:fixed url(circlet.jpg)no-repeat 50% 50% ;
+	height:100%;
+	background-size:40%; 
+}
+.second{
+	position:absolute;
+	left:50%;
+	top:50%;
+	padding-right:15%;
+	padding-top:1px;
+	background-color: black;
+	transform-origin: left;
+	transform: rotate(-90deg);
+	
+}
+.minute{
+	position:absolute;
+	left:50%;
+	top:50%;
+	padding-right:15%;
+	padding-top:3px;
+	background-color: black;
+	transform-origin: left;
+	transform: rotate(-90deg);
+	
+}
+.hour{
+	position:absolute;
+	left:50%;
+	top:50%;
+	padding-right:10%;
+	padding-top:6px;
+	background-color: black;
+	transform-origin: left;
+	transform: rotate(-90deg);
+}
+
+.numeric {
+	position:relative;
+	left:50%;
+	top:8%;
+	width:150px;
+	height:6%;
+	margin-left:-75px;
+	border: 1px solid black;
+	font-size:30px;
+	text-align:center;
+}
+button{
+	position:absolute;
+	border-radius: 5px;
+	left:50%;
+	top: 2%;
+	width:100px;
+	height:50px;
+	margin-left:-50px;
+}
