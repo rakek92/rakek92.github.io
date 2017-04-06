@@ -109,7 +109,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
   position: relative;
   top: 20px;
-  height: 13%;
+  height: 10%;
 
   margin-bottom: 30px;
 }
@@ -130,20 +130,21 @@ a:visited {
 
 .header_discr{
   text-shadow: 0px -1px 0px rgba(136, 136, 137, 1);
-  padding-right: 20px;
+  margin-right: 20px;
   padding-top: 20px;
-  width:40%;
+  max-width:50%;
   float: right;
   text-align: right;
 
 }
 /*------------------------WORKS-------------------*/
 .works{
-  height: 100%;
+  
+  width:100%;
 }
 .works_navigation {
   position: relative;
-  height: 60px;
+  height: 7%;
   width: 100%;
   font-family: sans-serif;
   font-size: 15px;
@@ -189,21 +190,25 @@ a:visited {
   color: #000000;
   text-shadow: 0px -1px 0px rgba(136, 136, 137, 1);
 }
+.content{
+  display: inline-block;
+}
 
 .content_item{
   font-stretch: ultra-condensed; 
 
   float: left;
   color:#6a6e75;
-  width:29%;
+  width:33.333333%;
   height:300px;
   font-size: 30px;
-  margin: 20px;
-}
+ }
 .content_item_img{
   
-  height: 250px;
-  width: 300px;
+  min-height: 250px;
+  min-width: 100%;
+  max-height: 250px;
+  max-width: 100%;
   border-radius: 5px;
 }
 
@@ -215,7 +220,7 @@ a:visited {
   height:115px;
 }
 .footer{
-  height:13%;
+  
   margin-top: 0 auto;
   position: relative;
 }
