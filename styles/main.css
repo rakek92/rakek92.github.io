@@ -85,10 +85,12 @@ body {
 }
 .content_item {
   min-width: 33.33333333%;
-  height: 250px;
+  
+  
   float: left;
   margin-bottom: 7%;
 }
+
 .content .content_item .img_cont {
   width: 92%;
   margin: 0 auto;
@@ -102,6 +104,7 @@ body {
 	font-weight: bold;
 	font-size: 25px;
 	width:50%;
+  height: 100%;
 	margin:0 auto;
 }
 
