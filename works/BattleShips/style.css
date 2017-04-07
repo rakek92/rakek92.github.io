@@ -9,67 +9,30 @@ html{
 
 body{
 	
-	padding: 0px;
-	margin: 0px;
+	
 	width:100%;
 	height: 100%;
 
 }
-.wrapper{
 
-	position: relative;
-	opacity: 0.6;
-	width: 100%;
-	height: 100%;
-	background-color: #AFEEEE;
-}
-.PvP{
 
-	background: rgb(246,248,249); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(246,248,249,1) 0%, rgba(229,235,238,1) 50%, rgba(215,222,227,1) 51%, rgba(245,247,249,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
-	font-weight: bold;
-	border-radius: 40px;
-	width: 15%;
-	height: 8%;
-	position: absolute;
-	top:30%;
-	left:50%;
-	float: left;
-	margin-left: -8%;
-}
-.PvC{
-	background: rgb(246,248,249); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(246,248,249,1) 0%, rgba(229,235,238,1) 50%, rgba(215,222,227,1) 51%, rgba(245,247,249,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
-	font-weight: bold;
-	border-radius: 40px;
-	width: 15%;
-	height: 8%;
-	position: absolute;
-	top:60%;
-	left:50%;
-	margin-left: -8%;
-}
 
 .fields{
-	height:455px;
+	height:100%;
+	width:93.75%;
 	top:5%;
 	left:50%;
-	margin-left: -475px;
-	width:1050px;
-	position: relative;
-	float: top;
+	margin: 0px auto;
+	max-width:1000px;
+	
+	
 }
 .firstfield{
 	position: relative;
 	float: left;
-	
-	width: 450px;
+	top:4%;
+	height:50%;
+	width: 50%;
 }
 .playerName1{
 	position: relative;
@@ -77,22 +40,23 @@ body{
 }
 .leters1{
 	position: relative;
-	left:10%;
+	left:2%;
 	height: 20px;
 }
 .l1{
 	display:inline-block;
-	margin-right: 27px;
+	margin-right: 5.5%;
+
 }
 .numbers1{
-	top:15%;
+	top:5%;
 	position:relative;
 	float:left;
-	height:400px;
-	padding-left: 3%;
+	height:100%;
+	
 }
 li{
-	margin-bottom: 26px;
+	margin-bottom: 150%;
 	list-style: none;
 }
 ul{
@@ -105,16 +69,18 @@ ul{
 	top:6%;
 	padding: 0px;
 	margin: 0px;
-	width:420px;
-	height:435px;
+	width:90%;
+	height:90%;
+	
 	float: left;
 }
 .secondfield{
 	visibility: hidden;
 	position: relative;
-	float: left;
-	left:150px;
-	width: 450px;
+	float: right;
+	top:4%;
+	height:50%;
+	width: 50%;
 }
 .playerName2{
 	position: relative;
@@ -123,19 +89,18 @@ ul{
 
 .leters2{
 	position: relative;
-	left:7%;
-	
+	left:5%;
 	height: 20px;
 }
 .l2{
 	display:inline-block;
-	margin-right: 27px;
+	margin-right: 5.5%;
 }
 .numbers2{
-	top:6%;
+	top:5%;
 	position:relative;
 	float:left;
-	height:435px;
+	height:100%;
 }
 
 
@@ -143,19 +108,19 @@ ul{
 	border-radius: 8px;
 	position: relative;
 	top:6%;
-	float:left;
-	
 	padding: 0px;
 	margin: 0px;
-	width:420px;
-	height:435px;
+	width:90%;
+	height:90%;
+	
+	float: right;
 }
 .square{
 	margin-right: 2px;
 	position: relative;
 	display:inline-block;
-	width:38px;
-	height: 38px;
+	width:8%;
+	height: 8%;
 	border:1px solid black;
 }
 .square:hover{
@@ -202,13 +167,7 @@ ul{
 	
 }
 
-.ranking{
-	position: relative;
-	top: 10%;
-	left: 50%;
-	margin-left: -350px;
-	width:700px;
-}
+
 
 img{
 	margin-left: 20px;
@@ -219,43 +178,50 @@ img:hover{
 .ranking1{
 	position: relative;
 	width:38px;
-	height: 38px;
+	
 	
 }
 .ranking1g{
 	position: relative;
 	width:38px;
-	height: 38px;
+	top:2%;
+	
 }
 .ranking2{
 	position: relative;
-	width:38px;
-	height: 80px;
+	width:4%;
+	top:2%;
+	
 }
 .ranking2g{
 	position: relative;
 	width:80px;
-	height: 38px;
+	top:2%;
+	width:4%;
 }
 .ranking3{
 	position: relative;
-	width:38;
+	top:2%;
+	width:4%;
 	height: 120px;
 }
 .ranking3g{
 	position: relative;
+	top:2%;
 	width:120px;
-	height: 38px;
+	width:4%;
 }
 .ranking4{
 	position: relative;
-	width:38px;
+	width:4%;
+	top:2%;
 	height: 160px;
 }
 .ranking4g{
 	position: relative;
+	top:2%;
 	width:160px;
-	height: 38px;
+	width:4%;
 }
 .getted{
 	background: red;
