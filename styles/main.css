@@ -80,9 +80,9 @@ body {
 }
 .content_item {
   width: 33.33333333%;
-  min-height: 250px;
+  height: 250px;
   float: left;
-  margin-bottom: 3%;
+  margin-bottom: 7%;
 }
 .content .content_item .img_cont {
   width: 92%;
