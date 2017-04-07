@@ -43,19 +43,19 @@ body {
 .numeric {
 	position:relative;
 	left:50%;
-	top:82%;
-	width:150px;
-	height:40px;
+	top:50%;
+	width:10%;
+	
 	margin-left:-75px;
 	border: 1px solid black;
-	font-size:30px;
+	font-size:150%;
 	text-align:center;
 }
 button{
 	position:absolute;
 	border-radius: 5px;
 	left:50%;
-	top: 91%;
+	top: 55%;
 	width:100px;
 	height:50px;
 	margin-left:-50px;
