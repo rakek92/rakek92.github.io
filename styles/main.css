@@ -90,6 +90,9 @@ body {
 }
 .content .content_item .img_cont img {
   max-width: 100%;
+  max-height:80%;
+  
+
   
 }
 .discr{
