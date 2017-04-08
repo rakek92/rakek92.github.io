@@ -23,7 +23,7 @@ body{
 	
 	left:50%;
 	margin: 0px auto;
-	max-width:1000px;
+	max-width:960px;
 	
 	
 }
@@ -70,7 +70,7 @@ ul{
 .field1{
 	border-radius: 8px;
 	position: relative;
-	top:6%;
+	
 	padding: 0px;
 	margin: 0px;
 	width:90%;
@@ -110,7 +110,7 @@ ul{
 .field2{
 	border-radius: 8px;
 	position: relative;
-	top:6%;
+	
 	padding: 0px;
 	margin: 0px;
 	width:90%;
