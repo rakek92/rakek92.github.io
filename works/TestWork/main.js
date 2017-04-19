@@ -16,8 +16,9 @@ xhr.onerror = function () {
 xhr.send();
 document.querySelector('.start').addEventListener('click', start);
 
-function start(){
-    this.style.display='none';
+function start() {
+    this.style.display = 'none';
+    createWatch();
     function random(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -49,20 +50,23 @@ function start(){
             td.appendChild(img);
         }
     }
-    table.addEventListener('click',show);
-    function show(event){
+    createScore();
+    table.addEventListener('click', show);
+    function show(event) {
         var target = event.target;
         while (target != table) {
             if (target.tagName == 'TD') {
-               highlight(target);
+                highlight(target);
                 return;
             }
             target = target.parentNode;
         }
     }
-    var checkArr=[];
+
+    var checkArr = [];
+
     function highlight(node) {
-        if (checkArr.length < 2) {
+        if (checkArr.length < 2&&node.children[0].style.visibility !== 'visible') {
             node.children[0].style.visibility = 'visible';
             checkArr.push(node.children[0]);
             setTimeout(check, 1000);
@@ -77,9 +81,34 @@ function start(){
             }
         }
     }
+    function createWatch() {
+        var watch = document.createElement('div');
+        watch.className = 'watch';
+        function clock() {
+            var seconds = 0;
+            return function tik() {
+                seconds++;
+                watch.textContent = 'Time: ' + seconds;
+            }
+        }
+        document.querySelector('.content').appendChild(watch);
+        setInterval(clock(), 1000);
+    }
+        function createScore() {
+            var score = document.createElement('div');
+            score.className = 'score';
+            function scoreDispl() {
+                var points = 1000;
+                return function tik() {
+                    points--;
+                    score.textContent = 'Score: ' + points;
+                }
+            }
+
+        document.querySelector('.content').appendChild(score);
+        setInterval(scoreDispl(), 1000);
+    }
 }
-
-
 
 
 
