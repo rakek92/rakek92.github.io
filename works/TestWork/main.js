@@ -18,12 +18,10 @@ document.querySelector('.start').addEventListener('click', start);
 
 function start() {
     this.style.display = 'none';
-    createWatch();
     function random(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-
-    var imgNum = (data.width * data.height) / 2;//количество картинок
+    var imgNum = (data.width * data.height) / 2;//number of imgs
     var imgs = [];
     for (var i = 0; i < imgNum; i++) {
         imgs.push('https://kde.link/test/' + i + '.png');
@@ -33,6 +31,8 @@ function start() {
             imgNum = imgNum - 9;
         }
     }
+    createWatch();
+
     var table = document.createElement('table');
     table.className = 'field';
     document.querySelector('.content').appendChild(table);
@@ -50,7 +50,7 @@ function start() {
             td.appendChild(img);
         }
     }
-    createScore();
+
     table.addEventListener('click', show);
     function show(event) {
         var target = event.target;
@@ -81,6 +81,7 @@ function start() {
             }
         }
     }
+    createScore();
     function createWatch() {
         var watch = document.createElement('div');
         watch.className = 'watch';
@@ -91,22 +92,23 @@ function start() {
                 watch.textContent = 'Time: ' + seconds;
             }
         }
+        watch.textContent = 'Time: ';
         document.querySelector('.content').appendChild(watch);
         setInterval(clock(), 1000);
     }
-        function createScore() {
-            var score = document.createElement('div');
+    function createScore() {
+         var score = document.createElement('div');
             score.className = 'score';
             function scoreDispl() {
-                var points = 1000;
-                return function tik() {
-                    points--;
-                    score.textContent = 'Score: ' + points;
-                }
-            }
-
-        document.querySelector('.content').appendChild(score);
-        setInterval(scoreDispl(), 1000);
+              var points = 1000;
+              return function tik() {
+                 points--;
+                 score.textContent = 'Score: ' + points;
+              }
+         }
+         score.textContent = 'Score: ';
+         document.querySelector('.content').appendChild(score);
+         setInterval(scoreDispl(), 1000);
     }
 }
 

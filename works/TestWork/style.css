@@ -15,6 +15,7 @@ body {
     background: -webkit-linear-gradient(top, rgba(252,252,255,1) 0%,rgba(186,192,193,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(252,252,255,1) 0%,rgba(186,192,193,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcff', endColorstr='#bac0c1',GradientType=0 ); /* IE6-9 */
+    background-attachment: fixed;
     margin:0;
     padding:0;
     width:100%;
@@ -31,14 +32,8 @@ body {
 }
 
 .field{
+
     margin:0 auto;
-    opacity:1;
-
-    -webkit-transition:opacity .2s ease-in-out;
-    -moz-transition:opacity .2s ease-in-out;
-    transition:opacity .2s ease-in-out;
-
-
 }
 .start{
     margin-top: 15%;
