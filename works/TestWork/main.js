@@ -17,6 +17,8 @@ xhr.send();
 document.querySelector('.start').addEventListener('click', start);
 
 function start() {
+    scoreId=0;
+    timerId=0;
     this.style.display = 'none';
     function random(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -31,7 +33,7 @@ function start() {
             imgNum = imgNum - 9;
         }
     }
-    createWatch();
+
 
     var table = document.createElement('table');
     table.className = 'field';
@@ -46,6 +48,7 @@ function start() {
             img = document.createElement('img');
             var randSrc = random(0, imgs.length - 1);
             img.src = imgs[randSrc];
+            img.style.visibility='hidden';
             imgs.splice(randSrc, 1);
             td.appendChild(img);
         }
@@ -68,6 +71,8 @@ function start() {
     function highlight(node) {
         if (checkArr.length < 2&&node.children[0].style.visibility !== 'visible') {
             node.children[0].style.visibility = 'visible';
+
+
             checkArr.push(node.children[0]);
             setTimeout(check, 1500);
             function check() {
@@ -77,24 +82,41 @@ function start() {
                 }
                 if (checkArr[1]) {
                     checkArr = [];
+
                 }
             }
+
         }
     }
+    createWatch();
     createScore();
     function createWatch() {
         var watch = document.createElement('div');
         watch.className = 'watch';
         function clock() {
+
             var seconds = 0;
             return function tik() {
+                endGame();
+                function endGame(){
+                    imgs=document.querySelectorAll('img');
+                    for (var i=0;i<imgs.length;i++){
+                        if(imgs[i].style.visibility==='hidden'){
+                            return;
+                        }
+                    }
+                    clearInterval(timerId);
+                    clearInterval(scoreId);
+                    alert(watch.textContent +' '+ document.querySelector('.score').textContent);
+                }
                 seconds++;
                 watch.textContent = 'Time: ' + seconds;
             }
         }
         watch.textContent = 'Time: ';
+        watch.className='watch';
         document.querySelector('.content').appendChild(watch);
-        setInterval(clock(), 1000);
+        timerId=setInterval(clock(), 1000);
     }
     function createScore() {
          var score = document.createElement('div');
@@ -107,8 +129,9 @@ function start() {
               }
          }
          score.textContent = 'Score: ';
+         score.className='score';
          document.querySelector('.content').appendChild(score);
-         setInterval(scoreDispl(), 1000);
+         scoreId=setInterval(scoreDispl(), 1000);
     }
 }
 
