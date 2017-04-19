@@ -17,6 +17,8 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcff', endColorstr='#bac0c1',GradientType=0 ); /* IE6-9 */
     margin:0;
     padding:0;
+    width:100%;
+    height:100%;
     text-align: center;
 }
 .content{
@@ -30,6 +32,13 @@ body {
 
 .field{
     margin:0 auto;
+    opacity:1;
+
+    -webkit-transition:opacity .2s ease-in-out;
+    -moz-transition:opacity .2s ease-in-out;
+    transition:opacity .2s ease-in-out;
+
+
 }
 .start{
     margin-top: 15%;
@@ -40,6 +49,7 @@ body {
 .field_item{
     border:1px solid black;
     border-radius: 5px;
+    background: #2D2D2D;
 }
 .field_item img{
     visibility: hidden;

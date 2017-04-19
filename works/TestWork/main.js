@@ -69,7 +69,7 @@ function start() {
         if (checkArr.length < 2&&node.children[0].style.visibility !== 'visible') {
             node.children[0].style.visibility = 'visible';
             checkArr.push(node.children[0]);
-            setTimeout(check, 1000);
+            setTimeout(check, 1500);
             function check() {
                 if (checkArr[1] && checkArr[1].src !== checkArr[0].src) {
                     checkArr[1].style.visibility = 'hidden';
