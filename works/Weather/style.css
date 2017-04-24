@@ -4,6 +4,7 @@
     font-family: 'Oswald', sans-serif;
     color:#fff;
     border-radius: 40px;
+    border:1px solid black;
     width:400px;
     height:200px;
     background: rgb(28,129,173); /* Old browsers */
@@ -15,7 +16,7 @@
 .icon{
 
     float:left;
-    padding-left: 50px;
+    padding-left: 20px;
     padding-top: 70px;
 
 
@@ -23,12 +24,9 @@
 }
 .temp{
     position: relative;
-    width:120px;
+    width:170px;
     font-size:70px;
-    left:10%;
     padding-top: 40px;
-
-    height:120px;
     float:left;
 
 }
@@ -37,8 +35,6 @@
     position: relative;
     font-size: 14px;
     padding-top: 20px;
-
-
     float:right;
     padding-right:10px;
 }
@@ -46,7 +42,6 @@
     text-align: right;
     position: relative;
     font-size: 12px;
-
     width:150px;
     float:right;
     padding-right:10px;
@@ -79,4 +74,10 @@
     width:150px;
     float:right;
     padding-right:10px;
+}
+.descr{
+    text-align: left;
+    font-size: 20px;
+    float:left;
+    padding-left:70px;
 }

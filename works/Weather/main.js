@@ -75,41 +75,49 @@ xhr.onreadystatechange = function(ev) {
             watch.textContent = time;
         }
 
+
         var humidity=document.createElement('div');
         humidity.textContent='Влажность: '+data.main.humidity+' %';
         document.querySelector('.widget').appendChild(humidity);
         humidity.className='humidity';
+
+
 
         var pressure=document.createElement('div');
         pressure.textContent='Давление: '+Math.round(data.main.pressure*0.00750062)+' мм рт ст';
         pressure.className='pressure';
         document.querySelector('.widget').appendChild(pressure);
 
+        var descr=document.createElement('div');
+        descr.className='descr';
+        descr.textContent= data.weather[0].description.toUpperCase();
+        document.querySelector('.widget').appendChild(descr);
+
         var wind=document.createElement('div');
         wind.className='wind';
         var windDeg=data.wind.deg;
-        if(windDeg>335||windDeg<25){
+        if(windDeg>=335||windDeg<=25){
             windDeg=' северный'
         }
-        if(windDeg>25){
+        if(windDeg>=25){
             windDeg=' северо-западный'
         }
-        if(windDeg>70){
+        if(windDeg>=70){
             windDeg=' западный'
         }
-        if(windDeg>115){
+        if(windDeg>=115){
             windDeg=' юго-восточный'
         }
-        if(windDeg>160){
+        if(windDeg>=160){
             windDeg=' южный'
         }
-        if(windDeg>205){
+        if(windDeg>=205){
             windDeg=' юго-западный'
         }
-        if(windDeg>250){
+        if(windDeg>=250){
             windDeg='  восточный'
         }
-        if(windDeg>295){
+        if(windDeg>=295){
             windDeg=' северо-восточный'
         }
         wind.textContent='Ветер: '+data.wind.speed+' м/с'+windDeg;
