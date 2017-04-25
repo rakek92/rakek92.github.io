@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts search</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id='content'></div>
+
+<script type="text/babel">
+
+    var CONTACTS = [
+        {
+            id: 1,
+            name: 'Леголас Трандуилович',
+            phoneNumber: '+380682548158',
+            image: 'http://s4.pikabu.ru/post_img/2016/01/12/5/og_og_1452584779250572564.jpg'
+        }, {
+            id: 2,
+            name: 'Гимли Дуринович',
+            phoneNumber: '+380672562464',
+            image: 'http://vignette2.wikia.nocookie.net/lotr/images/f/f0/%D0%93%D0%B8%D0%BC%D0%BB%D0%B8_%D1%81%D1%8B%D0%BD_%D0%93%D0%BB%D0%BE%D0%B8%D0%BD%D0%B0.jpg/revision/latest?cb=20160429143520&path-prefix=ru'
+        }, {
+            id: 3,
+            name: 'Гендальф Митрандирович',
+            phoneNumber: '+380951254875',
+            image: 'https://upload.wikimedia.org/wikipedia/ru/thumb/1/1c/Gandalf_the_White.jpg/250px-Gandalf_the_White.jpg'
+        }, {
+            id: 4,
+            name: 'Арагорн Араторнович',
+            phoneNumber: '+380692567448',
+            image: 'https://icdn.lenta.ru/images/2015/05/05/16/20150505162926327/pic_84f24adda8a75cf989e5c6db958a2f04.jpg'
+        }
+    ];
+    var Contact = React.createClass({
+        render:function(){
+            return (
+                <li className="contact">
+                    <img className="contact-image" src={this.props.image} width="60px" height="60px"/>
+                    <div className="contact-info">
+                        <div className="contact-name">{this.props.name}</div>
+                        <div className="contact-number">{this.props.phoneNumber}</div>
+                    </div>
+
+                </li>
+            )
+        }
+    });
+    var ContactsList = React.createClass({
+        getInitialState: function(){
+            return {
+                displayedContacts: CONTACTS
+            };
+        },
+        handleSearch:function(event){
+            var searchQuery= event.target.value.toLowerCase();
+            var displayedContacts= CONTACTS.filter(function(el){
+                var searchValue=el.name.toLowerCase();
+                return searchValue.indexOf(searchQuery) !==-1;
+
+            });
+            this.setState({
+                displayedContacts:displayedContacts
+            })
+        },
+        render: function() {
+            return (
+                    <div className="contacts">
+                        <input type="text" className="search-field" onChange={this.handleSearch}/>
+                        <ul className="contacts-list">
+                            {
+                                this.state.displayedContacts.map(function(el){
+                                return <Contact key={el.id}
+                                                name={el.name}
+                                                phoneNumber={el.phoneNumber}
+                                                image={el.image}
+                                />
+                                    })
+
+                            }
+                        </ul>
+                    </div>
+            );
+        }
+    });
+    ReactDOM.render(
+        <ContactsList/>,
+        document.getElementById('content')
+    );
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
