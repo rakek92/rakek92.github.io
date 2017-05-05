@@ -1,0 +1,12 @@
+@keyframes move{
+    from{border-radius:0%;
+        transform: rotate(0deg);
+    }
+    to{border-radius: 50%;
+    transform:rotate(360deg)}
+}
+
+td{
+
+    animation: move 1s infinite ease-in-out alternate;
+}
