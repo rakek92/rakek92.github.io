@@ -84,7 +84,7 @@ body {
   display: inline-block;
 }
 .content_item {
-  min-width: 33.33333333%;
+  width: 320px;
   
   
   float: left;
@@ -98,14 +98,17 @@ body {
 .content .content_item .img_cont img {
   max-width: 100%;
   height: 250px;
+  display: block;
+  margin: 0 auto;
 }
 .discr{
 	font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 25px;
 	width:50%;
-  height: 100%;
+    height: 100%;
 	margin:0 auto;
+  text-align: center;
 }
 
 
