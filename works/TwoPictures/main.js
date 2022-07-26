@@ -1,19 +1,21 @@
 var data;
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://kde.link/test/get_field_size.php', false);
-xhr.onload = function () {
-    try {
-        data = JSON.parse(this.responseText);
-        console.log('Data was successfully received and parsed\n\t', data);
-    } catch (e) {
-        console.warn('Warning! Invalid json data was received!');
-        data = {};
-    }
-};
-xhr.onerror = function () {
-    console.error('XHR error: ' + this.status);
-};
-xhr.send();
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', 'https://kde.link/test/get_field_size.php', false);
+// xhr.onload = function () {
+//     try {
+//         data = JSON.parse(this.responseText);
+//         console.log('Data was successfully received and parsed\n\t', data);
+//     } catch (e) {
+//         console.warn('Warning! Invalid json data was received!');
+//         data = {};
+//     }
+// };
+
+data = { width: 8, height: 8 }
+// xhr.onerror = function () {
+//     console.error('XHR error: ' + this.status);
+// };
+// xhr.send();
 document.querySelector('.start').addEventListener('click', start);
 
 function start() {
